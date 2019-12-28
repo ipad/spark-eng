@@ -25,7 +25,7 @@ object StreamDemo {
     errorLines.print()
     
     sc.start()
-    sc.awaitTermination(10000)
+    sc.awaitTermination()
     sc.stop()
 
   }
