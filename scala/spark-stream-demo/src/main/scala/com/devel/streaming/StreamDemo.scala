@@ -1,3 +1,5 @@
+package com.devel.streaming
+
 import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.streaming.StreamingContext._
 import org.apache.spark.streaming.dstream.DStream
