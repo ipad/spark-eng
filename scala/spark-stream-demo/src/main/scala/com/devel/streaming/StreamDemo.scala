@@ -21,13 +21,13 @@ object StreamDemo {
     val sc = new StreamingContext(conf, Seconds(1))
 
     val lines = sc.socketTextStream("hadp-dev", 7777)
-    val errorLines = lines.filter(processLines(lines))
+    val errorLines = processLines(lines)
     errorLines.print()
     
     sc.start()
     sc.awaitTermination(10000)
     sc.stop()
-    
+
   }
   def processLines(lines: DStream[String]) = {
     // Filter our DStream for lines with "error"
