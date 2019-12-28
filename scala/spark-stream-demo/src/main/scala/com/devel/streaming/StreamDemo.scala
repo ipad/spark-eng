@@ -16,7 +16,7 @@ object StreamDemo {
     val conf = new SparkConf().setAppName("wordcount")
     val sc = new StreamingContext(conf, Seconds(1))
 
-    val lines = sc.socketTextStream("localhost", 7777)
+    val lines = sc.socketTextStream("hadp-dev", 7777)
     val errorLines = lines.filter(_.contains("error"))
     errorLines.print()
     
