@@ -19,6 +19,8 @@ object StreamDemo {
     val lines = sc.socketTextStream("localhost", 7777)
     val errorLines = lines.filter(_.contains("error"))
     errorLines.print()
-
+    
+    sc.start()
+    sc.awaitTermination()
   }
 }
