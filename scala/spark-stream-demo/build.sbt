@@ -1,4 +1,4 @@
-name := "spark-straming-example"
+name := "spark-streaming-example"
 
 version := "1.0"
 
